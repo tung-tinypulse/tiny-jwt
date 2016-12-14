@@ -6,6 +6,10 @@ module Tiny
     SECRET_HASH = ENV['secret']
 
     def self.encode(payload)
+      p payload
+      p SECRET_HASH
+      p ALGORITHM
+      p JWT.encode(payload, SECRET_HASH, ALGORITHM)
       JWT.encode(payload, SECRET_HASH, ALGORITHM)
     end
 

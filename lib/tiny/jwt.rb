@@ -16,8 +16,6 @@ module Tiny
     end
 
     def self.encode(payload)
-      p configuration.secret_hash
-      p configuration.algorithm
       JWT.encode(payload, configuration.secret_hash, configuration.algorithm)
     end
 

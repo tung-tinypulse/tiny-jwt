@@ -1,4 +1,5 @@
 require "tiny/jwt/version"
+require "tiny/jwt/configuration"
 require "jwt"
 module Tiny
   module Jwt

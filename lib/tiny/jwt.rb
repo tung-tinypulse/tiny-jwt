@@ -20,7 +20,11 @@ module Tiny
     end
 
     def self.decode(token)
+      p token
+      p configuration.secret_hash
+      p configuration.algorithm
       decoded_token = JWT.decode(token, configuration.secret_hash, configuration.algorithm)
+      p decoded_token
       decoded_token[0]
     end
   end
